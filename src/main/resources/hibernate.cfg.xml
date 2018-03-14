@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <mapping class="com.castsoftware.dbapi.mngt.CmsAmModels"/>
+  <mapping class="com.castsoftware.dbapi.mngt.CmsAmExternData"/>
+  <mapping class="com.castsoftware.dbapi.mngt.CmsDynamicFields"/>
+  <mapping class="com.castsoftware.dbapi.mngt.CmsNextId"/>
+ </session-factory>
+</hibernate-configuration>
