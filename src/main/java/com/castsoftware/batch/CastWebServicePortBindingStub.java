@@ -8,7 +8,11 @@
 package com.castsoftware.batch;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
+import com.castsoftware.vps.vo.ValidationResults;
 
 public class CastWebServicePortBindingStub extends org.apache.axis.client.Stub implements
 		com.castsoftware.batch.CastWebService
@@ -21,7 +25,7 @@ public class CastWebServicePortBindingStub extends org.apache.axis.client.Stub i
 	static org.apache.axis.description.OperationDesc[] _operations;
 
 	static {
-		_operations = new org.apache.axis.description.OperationDesc[40];
+		_operations = new org.apache.axis.description.OperationDesc[49];
 		_initOperationDesc1();
 		_initOperationDesc2();
 		_initOperationDesc3();
@@ -955,6 +959,190 @@ public class CastWebServicePortBindingStub extends org.apache.axis.client.Stub i
 		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
 		oper.setUse(org.apache.axis.constants.Use.LITERAL);
 		_operations[39] = oper;
+		
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("getlatestDmtVersion");
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg2"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+		oper.setReturnClass(String.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[40] = oper;
+		
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("setCurrentScanType");
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+		oper.setReturnClass(int.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[41] = oper;
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("setSchemaNamesInAOP");
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+		oper.setReturnClass(int.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[42] = oper;
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("sendJenkinsConsolURL");
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg2"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		
+		
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+		oper.setReturnClass(int.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[43] = oper;
+		
+		
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("UpdateRescanStatus");
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg2"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg3"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg4"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+		oper.setReturnClass(int.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[44] = oper;
+
+		 
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("runAllChecks");
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg0"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("", "arg1"),
+				org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName(
+						"http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+		param.setOmittable(true);
+		oper.addParameter(param);
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+		oper.setReturnClass(java.lang.String.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[45] = oper;
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("initAppl");
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+		oper.setReturnClass(int.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[46] = oper;
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("deleteAppl");
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+		oper.setReturnClass(int.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[47] = oper;
+		
+		oper = new org.apache.axis.description.OperationDesc();
+		oper.setName("getApplCount");
+		oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "int"));
+		oper.setReturnClass(int.class);
+		oper.setReturnQName(new javax.xml.namespace.QName("", "return"));
+		oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
+		oper.setUse(org.apache.axis.constants.Use.LITERAL);
+		_operations[48] = oper;
+		
 	}
 	
 	
@@ -1460,6 +1648,42 @@ public class CastWebServicePortBindingStub extends org.apache.axis.client.Stub i
 			throw axisFaultException;
 		}
 	}
+	
+	public int UpdateRescanStatus(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2,
+			java.lang.String arg3, java.lang.String arg4) throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[44]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "UpdateRescanStatus"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] { arg0, arg1, arg2, arg3, arg4 });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return ((java.lang.Integer) _resp).intValue();
+				} catch (java.lang.Exception _exception) {
+					return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}
 
 	public int deliveryManagerTool(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2,
 			java.lang.String arg3, java.util.Calendar arg4) throws java.rmi.RemoteException
@@ -1675,6 +1899,283 @@ public class CastWebServicePortBindingStub extends org.apache.axis.client.Stub i
 			throw axisFaultException;
 		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public int setCurrentScanType(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[41]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "setCurrentScanType"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] { arg0, arg1 });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return ((java.lang.Integer) _resp).intValue();
+				} catch (java.lang.Exception _exception) {
+					return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}
+	
+	public int setSchemaNamesInAOP(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[42]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "setSchemaNamesInAOP"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] { arg0, arg1 });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return ((java.lang.Integer) _resp).intValue();
+				} catch (java.lang.Exception _exception) {
+					return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}
+	
+	public String runAllChecks(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[45]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "runAllChecks"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] { arg0, arg1 });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return (java.lang.String) _resp;
+				} catch (java.lang.Exception _exception) {
+					return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}	
+
+	public int addAppl() throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[46]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "addAppl"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] {  });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return ((java.lang.Integer) _resp).intValue();
+				} catch (java.lang.Exception _exception) {
+					return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}
+	
+	public int deleteAppl() throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[47]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "deleteAppl"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] {  });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return ((java.lang.Integer) _resp).intValue();
+				} catch (java.lang.Exception _exception) {
+					return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}
+	
+	public int getApplCount() throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[48]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "getApplCount"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] {  });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return ((java.lang.Integer) _resp).intValue();
+				} catch (java.lang.Exception _exception) {
+					return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+
+	}
+
+	public int sendJenkinsConsolURL(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2) throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[43]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "sendJenkinsConsolURL"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] { arg0, arg1, arg2 });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return ((java.lang.Integer) _resp).intValue();
+				} catch (java.lang.Exception _exception) {
+					return ((java.lang.Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public java.lang.String ping() throws java.rmi.RemoteException
 	{
@@ -2066,6 +2567,43 @@ public class CastWebServicePortBindingStub extends org.apache.axis.client.Stub i
 			throw axisFaultException;
 		}
 	}
+	
+	public String getlatestDmtVersion(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)
+			throws java.rmi.RemoteException
+	{
+		if (super.cachedEndpoint == null) {
+			throw new org.apache.axis.NoEndPointException();
+		}
+		org.apache.axis.client.Call _call = createCall();
+		_call.setOperation(_operations[40]);
+		_call.setUseSOAPAction(true);
+		_call.setSOAPActionURI("");
+		_call.setEncodingStyle(null);
+		_call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
+		_call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
+		_call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
+		_call.setOperationName(new javax.xml.namespace.QName("http://batch.castsoftware.com/", "getlatestDmtVersion"));
+
+		setRequestHeaders(_call);
+		setAttachments(_call);
+		try {
+			java.lang.Object _resp = _call.invoke(new java.lang.Object[] { arg0, arg1, arg2 });
+
+			if (_resp instanceof java.rmi.RemoteException) {
+				throw (java.rmi.RemoteException) _resp;
+			} else {
+				extractAttachments(_call);
+				try {
+					return (java.lang.String) _resp;
+				} catch (java.lang.Exception _exception) {
+					return (java.lang.String) org.apache.axis.utils.JavaUtils.convert(_resp, java.lang.String.class);
+				}
+			}
+		} catch (org.apache.axis.AxisFault axisFaultException) {
+			throw axisFaultException;
+		}
+	}
+	
 	
 	public int DMTLogs(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3,java.util.Calendar arg4)
 			throws java.rmi.RemoteException

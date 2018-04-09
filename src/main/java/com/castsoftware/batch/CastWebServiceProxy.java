@@ -1,6 +1,9 @@
 package com.castsoftware.batch;
 
-import java.rmi.RemoteException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.castsoftware.vps.vo.ValidationResults;
 
 public class CastWebServiceProxy implements com.castsoftware.batch.CastWebService
 {
@@ -158,6 +161,13 @@ public class CastWebServiceProxy implements com.castsoftware.batch.CastWebServic
 		if (castWebService == null) _initCastWebServiceProxy();
 		return castWebService.deliveryManagerTool(arg0, arg1, arg2, arg3, arg4);
 	}
+	
+	public int UpdateRescanStatus(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2,
+			java.lang.String arg3, java.lang.String arg4) throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.UpdateRescanStatus(arg0, arg1, arg2, arg3, arg4);
+	}
 
 	public int deliveryReport(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2,  java.lang.String arg3,java.util.Calendar arg4)
 			throws java.rmi.RemoteException
@@ -172,6 +182,8 @@ public class CastWebServiceProxy implements com.castsoftware.batch.CastWebServic
 		if (castWebService == null) _initCastWebServiceProxy();
 		return castWebService.DMTLogs(arg0, arg1, arg2, arg3, arg4);
 	}
+	
+	
 
 	public int acceptDeliveryDMT(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2,
 			java.util.Calendar arg3) throws java.rmi.RemoteException
@@ -199,6 +211,55 @@ public class CastWebServiceProxy implements com.castsoftware.batch.CastWebServic
 		if (castWebService == null) _initCastWebServiceProxy();
 		return castWebService.archiveDelivery(arg0, arg1);
 	}
+	
+	
+	public int setCurrentScanType(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.setCurrentScanType(arg0, arg1);
+	}
+	public int setSchemaNamesInAOP(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.setSchemaNamesInAOP(arg0, arg1);
+	}
+	public int sendJenkinsConsolURL(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2) throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.sendJenkinsConsolURL(arg0, arg1, arg2);
+	}
+	
+	public String runAllChecks(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.runAllChecks(arg0, arg1);
+	}
+	
+	public int addAppl() throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.addAppl();
+	}
+
+	public int deleteAppl() throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.deleteAppl();
+	}
+
+	public int getApplCount() throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.getApplCount();
+	}
+	
+	/*
+	public String getLowestAppRunCmsAnalServer(java.lang.String cms_anal1, java.lang.String cms_anal2, java.lang.String cms_anal3, java.lang.String cms_anal4, java.lang.String cms_anal5) throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.getLowestAppRunCmsAnalServer(cms_anal1, cms_anal2, cms_anal3, cms_anal4, cms_anal5);
+	}	
+	*/
 
 	public int deleteSnapshot(java.lang.String arg0, java.lang.String arg1, java.util.Calendar arg2,
 			java.lang.String arg3) throws java.rmi.RemoteException
@@ -314,6 +375,13 @@ public class CastWebServiceProxy implements com.castsoftware.batch.CastWebServic
 	{
 		if (castWebService == null) _initCastWebServiceProxy();
 		return castWebService.sendAnalysisLogs(arg0, arg1, arg2);
+	}
+	
+	public String getlatestDmtVersion(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2)
+			throws java.rmi.RemoteException
+	{
+		if (castWebService == null) _initCastWebServiceProxy();
+		return castWebService.getlatestDmtVersion(arg0, arg1, arg2);
 	}
  
 

@@ -49,7 +49,7 @@ public class CastRest {
         
 		return jsonResponse.getCode();	
 	}
-
+	
 	public static int listAads(String webServiceAddress, String login, String password, Collection<Aad> aads)
 	{
     	

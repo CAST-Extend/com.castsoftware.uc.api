@@ -7,7 +7,11 @@
 
 package com.castsoftware.batch;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
+import com.castsoftware.vps.vo.ValidationResults;
 
 public interface CastWebService extends java.rmi.Remote {
     public int consolidateSnapshot(java.lang.String arg0, java.lang.String arg1, java.util.Calendar arg2) throws java.rmi.RemoteException;
@@ -50,4 +54,13 @@ public interface CastWebService extends java.rmi.Remote {
 	public String getQAScanFlag() throws java.rmi.RemoteException;
 	public String getValidationStopFlag() throws java.rmi.RemoteException;
 	public int DMTLogs(java.lang.String appId, java.lang.String appName, java.lang.String versionName,java.lang.String referenceVersion, java.util.Calendar cal) throws java.rmi.RemoteException;
+	public String getlatestDmtVersion(String arg0, String arg1, String arg2)  throws java.rmi.RemoteException;
+	public int setCurrentScanType(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException;
+	public int setSchemaNamesInAOP(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException;
+	public int sendJenkinsConsolURL(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2) throws java.rmi.RemoteException;
+	public int UpdateRescanStatus(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4) throws java.rmi.RemoteException;
+	public String runAllChecks(java.lang.String arg0, java.lang.String arg1) throws java.rmi.RemoteException;
+	public int addAppl() throws java.rmi.RemoteException;
+	public int deleteAppl() throws java.rmi.RemoteException;
+	public int getApplCount() throws java.rmi.RemoteException;
 }
